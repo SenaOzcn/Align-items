@@ -1,60 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Align Items</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="container" class="flex">
-    <div id="item1">1</div>
-    <div id="item2">2</div>
-    <div id="item3">3</div>
-    <div id="item4">4</div>
-    <div id="item5">5</div>
-    <div id="item6">6</div>
-  </div>
+#container {
+    height:200px;
+    width: 240px;
+    align-items: center; /* Can be changed in the live sample */
+    background-color: yellow;
+    border-radius: 3%;
+  }
   
-  <div class="row">
-    <label for="display">display: </label>
-    <select id="display">
-      <option value="flex">flex</option>
-      <option value="grid">grid</option>
-    </select>
-  </div>
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
   
-  <div class="row">
-    <label for="values">align-items: </label>
-    <select id="values">
-      <option value="normal">normal</option>
-      <option value="flex-start">flex-start</option>
-      <option value="flex-end">flex-end</option>
-      <option value="center" selected>center</option>
-      <option value="baseline">baseline</option>
-      <option value="stretch">stretch</option>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+  }
   
-      <option value="start">start</option>
-      <option value="end">end</option>
-      <option value="self-start">self-start</option>
-      <option value="self-end">self-end</option>
+  div > div {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 20%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
   
-      <option value="first baseline">first baseline</option>
-      <option value="last baseline">last baseline</option>
+  #item1 {
+    background-color: blue;
+    min-height: 30px;
+  }
   
-      <option value="safe center">safe center</option>
-      <option value="unsafe center">unsafe center</option>
-      <option value="safe right">safe right</option>
-      <option value="unsafe right">unsafe right</option>
-      <option value="safe end">safe end</option>
-      <option value="unsafe end">unsafe end</option>
-      <option value="safe self-end">safe self-end</option>
-      <option value="unsafe self-end">unsafe self-end</option>
-      <option value="safe flex-end">safe flex-end</option>
-      <option value="unsafe flex-end">unsafe flex-end</option>
-    </select>
-  </div>
-      <script src="main.js"></script>
-</body>
-</html>
+  #item2 {
+    background-color: purple;
+    min-height: 50px;
+  }
+  
+  #item3 {
+    background-color: orange;
+    min-height: 40px;
+  }
+  
+  #item4 {
+    background-color: gray;
+    min-height: 60px;
+  }
+  
+  #item5 {
+    background-color: red;
+    min-height: 70px;
+  }
+  
+  #item6 {
+    background-color: brown;
+    min-height: 50px;
+    font-size: 30px;
+  }
+  
+  select {
+    font-size: 16px;
+  }
+  
+  .row {
+    margin-top: 10px;
+    font-size: 20px;
+  }
